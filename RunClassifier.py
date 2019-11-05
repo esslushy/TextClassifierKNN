@@ -15,7 +15,7 @@ data = processor.get_processed_data()
 data = np.array(data)
 
 # Shuffle data
-data = np.random.shuffle(data)
+np.random.shuffle(data)
 print('Processed Data')
 
 # KFold split and validation
