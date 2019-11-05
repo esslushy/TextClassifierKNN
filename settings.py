@@ -1,3 +1,3 @@
-CSV_LOCATION='all.csv'
-LABEL_COLUMN='age'
-DATA_COLUMN='content'
+CSV_LOCATION='lyrics.csv'
+LABEL_COLUMN='genre'
+DATA_COLUMN='lyrics'

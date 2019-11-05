@@ -4,12 +4,18 @@ from settings import CSV_LOCATION, LABEL_COLUMN, DATA_COLUMN
 from sklearn.model_selection import KFold
 import numpy as np
 
+# Set random seed
+np.random.seed(7)
+
 # Build processor
 processor = Preprocessor(CSV_LOCATION, LABEL_COLUMN, DATA_COLUMN)
 
 # Get data
 data = processor.get_processed_data()
 data = np.array(data)
+
+# Shuffle data
+data = np.random.shuffle(data)
 print('Processed Data')
 
 # KFold split and validation
