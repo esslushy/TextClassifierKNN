@@ -81,3 +81,14 @@ class KNearestNeighbor():
         for label in self.labels:
             classes[label] = classes[label] / self.k
         return classes
+
+    def predict_class(self, new_point):
+        classes = self.predict_classes(new_point)
+        best_class = None
+        best_value = -1
+        # Loop through classes and find one with the highest value to be the actual class
+        for key, value in classes.items():
+            if value > best_value:
+                best_class = key
+                best_value = value
+        return best_class
